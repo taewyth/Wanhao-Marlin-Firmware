@@ -615,7 +615,7 @@ static void drawCurESelection() {
 static void drawMessage(const char *msg) {
   tft.canvas(X_MARGIN, TFT_HEIGHT - Y_MARGIN - 34, TFT_HEIGHT / 2, 34);
   tft.set_background(COLOR_BACKGROUND);
-  tft.add_text(0, 0, COLOR_YELLOW, msg);
+  tft.add_text(0, 0, COLOR_DARK_ORANGE, msg);
 }
 
 static void drawAxisValue(const AxisEnum axis) {
