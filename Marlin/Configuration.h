@@ -46,6 +46,10 @@
 //#define D12_500_Pro
 //#define D12_300_Pro
 
+// Upgrade Full TMC sur la D12 230 ?
+// À activer si vous avez remplacé les drivers A4988 par des TMC2209
+//#define D12_230_FULL_TMC
+
 //===========================================================================
 
 // Ne pas oublier d'activer le BL_TOUCH pour la 500 Pro Max
@@ -951,15 +955,27 @@
 #endif
 
 #if ENABLED(D12_230_v1_3)
-#define Z_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE A4988
-#define E1_DRIVER_TYPE A4988
+  #if ENABLED(D12_230_FULL_TMC)
+    #define Z_DRIVER_TYPE  TMC2209_STANDALONE
+    #define E0_DRIVER_TYPE TMC2209_STANDALONE
+    #define E1_DRIVER_TYPE TMC2209_STANDALONE
+  #else
+    #define Z_DRIVER_TYPE  A4988
+    #define E0_DRIVER_TYPE A4988
+    #define E1_DRIVER_TYPE A4988
+  #endif
 #endif
 
 #if ENABLED(D12_230_v1_2)
-#define Z_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE A4988
-#define E1_DRIVER_TYPE A4988
+  #if ENABLED(D12_230_FULL_TMC)
+    #define Z_DRIVER_TYPE  TMC2209_STANDALONE
+    #define E0_DRIVER_TYPE TMC2209_STANDALONE
+    #define E1_DRIVER_TYPE TMC2209_STANDALONE
+  #else
+    #define Z_DRIVER_TYPE  A4988
+    #define E0_DRIVER_TYPE A4988
+    #define E1_DRIVER_TYPE A4988
+  #endif
 #endif
 
 //#define X2_DRIVER_TYPE A4988
@@ -1410,15 +1426,27 @@
 #define INVERT_Y_DIR true
 
 #if ENABLED(D12_230_v1_2)
-#define INVERT_Z_DIR true
-#define INVERT_E0_DIR true
-#define INVERT_E1_DIR true
+  #if ENABLED(D12_230_FULL_TMC)
+    #define INVERT_Z_DIR false
+    #define INVERT_E0_DIR false
+    #define INVERT_E1_DIR false
+  #else
+    #define INVERT_Z_DIR true
+    #define INVERT_E0_DIR true
+    #define INVERT_E1_DIR true
+  #endif
 #endif
 
 #if ENABLED(D12_230_v1_3)
-#define INVERT_Z_DIR true
-#define INVERT_E0_DIR true
-#define INVERT_E1_DIR true
+  #if ENABLED(D12_230_FULL_TMC)
+    #define INVERT_Z_DIR false
+    #define INVERT_E0_DIR false
+    #define INVERT_E1_DIR false
+  #else
+    #define INVERT_Z_DIR true
+    #define INVERT_E0_DIR true
+    #define INVERT_E1_DIR true
+  #endif
 #endif
 
 #if ENABLED(D12_500_Pro)
