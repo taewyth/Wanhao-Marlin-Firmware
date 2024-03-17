@@ -53,7 +53,7 @@
 //#define Direct_Drive
 #define Dual_Extruder
 
-//#define BL_TOUCH
+#define BL_TOUCH
 
 //===========================================================================
 
@@ -1266,7 +1266,7 @@
 #define Z_PROBE_FEEDRATE_FAST (6*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 8)
 
 /**
  * Probe Activation Switch
@@ -1304,7 +1304,7 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
+#define MULTIPLE_PROBING 3
 //#define EXTRA_PROBING    1
 
 /**
