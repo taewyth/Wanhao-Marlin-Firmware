@@ -169,7 +169,18 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-//#define CUSTOM_MACHINE_NAME "3D Printer"
+#if ENABLED(D12_230_v1_2)
+  #define CUSTOM_MACHINE_NAME "Wanhao D12-230"
+#endif
+#if ENABLED(D12_230_v1_3)
+  #define CUSTOM_MACHINE_NAME "Wanhao D12-230"
+#endif
+#if ENABLED(D12_500_Pro)
+  #define CUSTOM_MACHINE_NAME "Wanhao D12-500"
+#endif
+#if ENABLED(D12_300_Pro)
+  #define CUSTOM_MACHINE_NAME "Wanhao D12-300"
+#endif
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
