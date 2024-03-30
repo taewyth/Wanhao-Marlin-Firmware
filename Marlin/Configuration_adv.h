@@ -3782,22 +3782,22 @@
 // Custom Menu: Main Menu
 #define CUSTOM_MENU_MAIN
 #if ENABLED(CUSTOM_MENU_MAIN)
-  //#define CUSTOM_MENU_MAIN_TITLE "Custom Commands"
-  #define CUSTOM_MENU_MAIN_SCRIPT_DONE "M117 User Script Done"
-  #define CUSTOM_MENU_MAIN_SCRIPT_AUDIBLE_FEEDBACK
-  //#define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
-  #define CUSTOM_MENU_MAIN_ONLY_IDLE         // Only show custom menu when the machine is idle
+  #define CUSTOM_MENU_MAIN_TITLE "Maintenance"
+  //#define CUSTOM_MENU_MAIN_SCRIPT_DONE "M117 User Script Done"
+  //#define CUSTOM_MENU_MAIN_SCRIPT_AUDIBLE_FEEDBACK
+  #define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
+  #define CUSTOM_MENU_MAIN_ONLY_IDLE       // Only show custom menu when the machine is idle
 
-   #define MAIN_MENU_ITEM_1_DESC ""
-  #define MAIN_MENU_ITEM_1_GCODE "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
+  #define MAIN_MENU_ITEM_1_DESC "Autoleveling"
+  #define MAIN_MENU_ITEM_1_GCODE "M107\nG28\nM190 S60\nG29\nM500\nG28\nM300 P1000\nM140 S0\nM117 Autoleveling Complete"
   #define MAIN_MENU_ITEM_1_CONFIRM
 
-  #define MAIN_MENU_ITEM_2_DESC ""
-  #define MAIN_MENU_ITEM_2_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  #define MAIN_MENU_ITEM_2_DESC "Filament Load"
+  #define MAIN_MENU_ITEM_2_GCODE "M109 S200\nM300 P200\nM0 > Touch to confirm load <\nM117 Loading filament...\nM83\nG92\nG92 E0.0\nG1 E30 F150\nG92 E0.0\nM82\nM400\nM104 S0\nM117 Load Complete"
   #define MAIN_MENU_ITEM_2_CONFIRM
 
-   #define MAIN_MENU_ITEM_3_DESC ""
-  #define MAIN_MENU_ITEM_3_GCODE "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
+  #define MAIN_MENU_ITEM_3_DESC "Filament Unload"
+  #define MAIN_MENU_ITEM_3_GCODE "M109 S200\nM300 P200\nM0 > Touch to confirm unload <\nM117 Unloading filament...\nM83\nG92\nG92 E0.0\nG1 E-30 F150\nG92 E0.0\nM82\nM400\nM104 S0\nM117 Unload Complete"
   #define MAIN_MENU_ITEM_3_CONFIRM
 
   //#define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
