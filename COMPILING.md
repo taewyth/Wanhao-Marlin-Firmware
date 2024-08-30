@@ -37,7 +37,7 @@ Once you have the project loaded in Visual Studio Code, let's configure it for y
 
     * There must be exactly one uncommented line so make sure to comment the others.
 
-```C
+```ini
 default_envs = mks_robin_nano35 # For MKS Robin Nano V1.2
 #default_envs = mks_robin_nano_v1_3_f4 # For MKS Robin Nano V1.3
 #default_envs = mks_robin_nano_v3_usb_flash_drive # For MKS Robin Nano V3
