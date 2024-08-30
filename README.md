@@ -6,7 +6,7 @@ A [Marlin 3D Printer Firmware](https://github.com/MarlinFirmware/Marlin) for [Wa
 
 **Features**
 
-* Classic TFT_COLOR_UI with all features unlocked
+* Classic [TFT_COLOR_UI](https://www.lesimprimantes3d.fr/forum/topic/40717-tuto-firmware-personnalis%C3%A9-wanhao-d12-comment-compiler-son-firmware/) with all features unlocked
 * Recolored UI for clarity and matching Wanhao printer line
 * Support for MKS v1.2, 1.3, 3.0 motherboards
 * Support for D12-230, 300, 500
@@ -22,7 +22,7 @@ _Tested on D12-230 with v1.2 motherboard, 3D touch, Single regular extruder._
 
 **ToDo List**
 
-* Enable and configure filament change gcode (M500)
+* Enable and configure filament change gcode (M600)
 
 **Known issues**
 
@@ -30,7 +30,7 @@ _Tested on D12-230 with v1.2 motherboard, 3D touch, Single regular extruder._
 
 ## Download
 
-Have a look at the [Releases section](https://github.com/ORelio/Wanhao-Marlin-Firmware) to get a build.
+Have a look at the [Releases section](https://github.com/ORelio/Wanhao-Marlin-Firmware/releases) to get a build.
 
 Currently, I can only provide a working build for my own configuration, which is:
 
@@ -44,8 +44,8 @@ To build your own version of the firmware, see [COMPILING.md](COMPILING.md).
 
 ## Usage
 
-Once you have the firmware installed, see [USERGUIDE.md](USERGUIDE).
+Once you have the firmware installed, see [USERGUIDE.md](USERGUIDE.md).
 
 ## License
 
-The project is licensed under GPLv3. See [License][LICENSE].
+The project is licensed under GPLv3. See [License](LICENSE).
