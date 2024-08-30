@@ -39,8 +39,9 @@
 
 //===========================================================================
 
-// CHOIX MODELE D12
+// PRINTER MODEL CHOICE - CHOIX MODELE D12
 // (!) Ne pas oublier de changer le type de carte mère dans platformio.ini (!)
+// (!) Don't forget to change the motherboard type in platformio.ini (!)
 #define D12_230_v1_2
 //#define D12_230_v1_3
 //#define D12_500_Pro
@@ -48,18 +49,22 @@
 
 // Upgrade 3D Touch
 // À activer si votre imprimante possède un 3D Touch
+// Enable this if your printer has a 3D Touch
 #define BL_TOUCH
 
 // Upgrade Direct Drive
 // À activer si votre imprimante possède un extrudeur Direct Drive
+// Enable this if your printer has a Direct Drive extruder
 //#define Direct_Drive
 
 // Upgrade Full TMC sur la D12 230
 // À activer si vous avez remplacé les drivers A4988 par des TMC2209
+// Enable this if you replaced all A4988 drivers with TMC2209
 //#define D12_230_FULL_TMC
 
 // Dual Extruder
 // À activer pour les imprimantes capables de gérer deux extrudeurs
+// Enable for printers capable of handling two extruders
 #define Dual_Extruder
 
 //===========================================================================

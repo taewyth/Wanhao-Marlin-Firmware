@@ -3797,7 +3797,7 @@
   #define MAIN_MENU_ITEM_2_CONFIRM
 
   #define MAIN_MENU_ITEM_3_DESC "Filament Unload"
-  #define MAIN_MENU_ITEM_3_GCODE "M109 S200\nM300 P200\nM0 > Touch to confirm unload <\nM117 Unloading filament...\nM83\nG92\nG92 E0.0\nG1 E-30 F150\nG92 E0.0\nM82\nM400\nM104 S0\nM117 Unload Complete"
+  #define MAIN_MENU_ITEM_3_GCODE "M109 S200\nM300 P200\nM0 > Touch to confirm unload <\nM117 Unloading filament...\nM83\nG92\nG92 E0.0\nG1 E-60 F150\nG92 E0.0\nM82\nM400\nM104 S0\nM117 Unload Complete"
   #define MAIN_MENU_ITEM_3_CONFIRM
 
   //#define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
