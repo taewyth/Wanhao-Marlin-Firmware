@@ -17,7 +17,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
+ AUTO_BED_LEVELING_*
  */
 #pragma once
 
@@ -1712,7 +1712,8 @@
 //#define AUTO_BED_LEVELING_LINEAR
 
 #if ENABLED(BL_TOUCH)
-#define AUTO_BED_LEVELING_BILINEAR
+//#define AUTO_BED_LEVELING_BILINEAR
+  #define AUTO_BED_LEVELING_UBL
 #endif
 
 #if DISABLED(BL_TOUCH)
